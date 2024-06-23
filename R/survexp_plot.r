@@ -60,11 +60,11 @@ survexp_plot=function(futime, status, age, sex, entry_date,
                       conditional=TRUE, data=data, ratetable=ratetable)
   lines(expected, lwd=lwd.exp, col=col.exp, lty=lty.exp, xscale=xscale)
   # legend
-  legend("bottomleft",
-         col=c(col.km, col.exp),
-         lty=c(lty.km, lty.exp),
-         lwd=c(lwd.km, lwd.exp),
-         legend=c("Observed", "Expected"))
+  #legend("bottomleft",
+  #       col=c(col.km, col.exp),
+  #       lty=c(lty.km, lty.exp),
+  #       lwd=c(lwd.km, lwd.exp),
+  #       legend=c("Observed", "Expected"))
   # relative
   fit <- AER(data$futime, data$status, data$age, data$sex, data$entry_date,
              PY.stand=1, ratetable=ratetable, alpha=alpha)
